@@ -11,7 +11,7 @@ const TvShowsSection = () => {
 
   const fetchShowsForWord = async (word) => {
     try {
-      const response = await fetch(`http://api.tvmaze.com/search/shows?q=${word}`);
+      const response = await fetch(`https://api.tvmaze.com/search/shows?q=${word}`);
       const data = await response.json();
       return data.slice(0, 3); // Get only first 3 shows
     } catch (error) {
