@@ -30,8 +30,9 @@ const TvShowsSection = () => {
       setShowsData(results);
       setLoading(false);
     };
-
+  
     fetchAllShows();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleAccordion = (word) => {
