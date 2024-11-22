@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// App.jsx
+import React from 'react';
+import Header from './components/Header';
+import QuizForm from './components/QuizForm';
+import Slider from './components/Slider';
+import Footer from './components/Footer';
+import TvShowsSection from './components/TvShowSelection';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      
+      <main className="max-w-6xl mx-auto px-4">
+        <div className="py-8">
+          <QuizForm />
+        </div>
+        
+        <div className="py-8">
+          <TvShowsSection />
+        </div>
+        
+        <div className="py-8">
+          <Slider />
+        </div>
+      </main>
+      <div >
+        <Footer />
+      </div>
     </div>
   );
 }
